@@ -1,0 +1,9 @@
+# Node modules
+client/node_modules
+
+# VsCode
+.vscode/
+.history/
+
+#config
+server/example.ini
