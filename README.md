@@ -7,7 +7,7 @@ Using Python JWT to use magic links
 "query-string": "^6.9.0",
 
 >>>
-# Server side installation 
+## Server side installation 
 >>  python --version
 >> install homebrew - depends on xcode
 >> xcode-select --install
@@ -15,42 +15,42 @@ Using Python JWT to use magic links
 >> brew doctor
 >> python3 --version
 
-# User virtual env 
-# venv is  default but we will use pipeenv so run
+### User virtual env 
+### venv is  default but we will use pipeenv so run
 brew install pipenv
 
-# Goto virtual env
+### Goto virtual env
 pipeenv shell 
-# install 
+### install 
 pipenv install django==2.2.6
 pipenv install djangorestframework
 pipenv install djangorestframework-jwt
 pipenv install django-cors-headers
 
-# Creating the project 
+### Creating the project 
 django-admin startproject jwtmagicsite .
-# edit settings 
+### edit settings 
 'rest_framework'
 'corsheaders',
  'corsheaders.middleware.CorsMiddleware', # Note that this needs to be placed above CommonMiddleware  
 REST_FRAMEWORK
 CORS_ORIGIN_WHITELIST
 
-# do migrations
+### do migrations
 python manage.py migrate
 python manage.py createsuperuser
-# taking username as email
+### taking username as email
 python manage.py runserver 127.0.0.1:8100
 
-# create an app - usercore
+### create an app - usercore
 python manage.py startapp usercore
-# update settings 
+### update settings 
 
-# create serializers.py in app
-# create views.py  in app
-# create urls.py  in app
+### create serializers.py in app
+### create views.py  in app
+### create urls.py  in app
 
-# crearted example.ini
+### crearted example.ini
 
 pipenv install configparser
 
